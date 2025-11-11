@@ -1,0 +1,4 @@
+enum SortCriteria {
+  name,
+  population,
+}

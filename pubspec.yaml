@@ -1,0 +1,88 @@
+name: a2sv_geo
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none'
+
+# The following defines the version and build number for your application.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0' # Updated SDK constraint
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.6
+  equatable: ^2.0.5 # Kept, but will be replaced by Freezed
+  dio: ^5.4.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  get_it: ^7.6.7
+  google_fonts: ^6.2.1
+  shimmer: ^3.0.0
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.8.1
+
+  # The following adds the Cupertino Icons font to your application.
+  cupertino_icons: ^1.0.8
+  shared_preferences: ^2.5.3
+  intl: ^0.20.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+  # Code Generation
+  build_runner: ^2.4.9
+  freezed: ^2.4.7
+  json_serializable: ^6.7.1
+  flutter_launcher_icons: ^0.13.1
+  
+  # Splash Screen Package
+  flutter_native_splash: ^2.3.1
+  
+  # Linter (Updated to latest major version)
+  flutter_lints: ^3.0.0
+
+# START OF flutter_native_splash CONFIGURATION
+flutter_native_splash:
+  color: "##0b619d" 
+  
+  # Specify the image path using the folder you defined in assets
+  image: assets/images/app_icon.png
+  
+  # Configuration for Android 12+ (Adaptive Icon)
+  android_12:
+    image: assets/images/app_icon.png
+    icon_background_color: "##0b619d" # Must match the main color
+# pubspec.yaml
+
+flutter_launcher_icons:
+  # The path to your single high-resolution image file
+  image_path: "assets/images/app_icon.png" 
+  
+  # Specify which platforms to generate icons for (true is usually desired)
+  android: true
+  ios: true
+
+  # Optional: For adaptive icons on Android 8.0+
+  # Adaptive icons need a background color/image and a foreground image (your logo)
+  adaptive_icon_background: "#FFFFFF"  # Can be a color code or an asset path
+  adaptive_icon_foreground: "assets/images/app_icon.png" # Optional: a separate foreground layer
+
+# The following section is specific to Flutter packages.
+flutter:
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+  assets:
+    - assets/fonts/
+    - assets/images/
+  fonts:
+    - family: PlusJakartaSans
+      fonts:
+        - asset: assets/fonts/PlusJakartaSans-Regular.ttf
+        - asset: assets/fonts/PlusJakartaSans-Bold.ttf
+          weight: 700
